@@ -1,0 +1,23 @@
+Here are short instructions on how to reproduce the work done:
+
+1) Go the official website of the Life in Kyrgyzstan survey at https://lifeinkyrgyzstan.org/ to get familiar with the survey and the type of data collected.
+
+2) Open the section on data access. To get access to the data you will need to register, sign the user contract and send it the IDSC. 
+
+3) After the application is approved for, downloaded the necessary datasets (it is a longitudinal survey covering several years).
+
+4) Perform the coding work as illustrated in the accompanying do-files.
+
+5) The correct order of running do-files:
+	a) tot_assets.do, sch_enrollment.do, remit_all_hhs.do, region.do, labor.do, ind_educ.do, exped_ed.do, BMI.do 
+	b) then: hhold_comp.do, hhold_income
+	c) then: tot_assets2011.do, sch_enrollment2011.do, remit_all_hhs2011.do, labor2011.do, ind_educ2011.do, exped_ed2011.do, BMI2011.do, hhold_comp2011.do
+	d) then: hhold_income2011
+	e) merged2010_sch_enrollment.do, merged2010_health.do, merged2010_labor.do, merged2010_exped_ed.do
+	f) merged2011_sch_enrollment.do, merged2011_health.do, merged2011_labor.do, merged2011_exped_ed.do
+	g) merged_sch_enr2010_2011.do, merged_health2010_2011.do, merged_labor2010_2011.do, merged_exp_ed2010_2011.do
+
+6) There is a master do-file where you can run all the do-files.
+
+7) Please note that due to the substantial coding work that had to be done to process and transform the data, I have not performed regression analysis in this project.
+   However, simple OLS regression with output (regression tables and graphs) has been performed in a smaller project that you also have access to on Github ("Project").
